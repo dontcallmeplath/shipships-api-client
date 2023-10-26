@@ -1,14 +1,29 @@
-import { useState } from "react";
+import { Route, Routes, Outlet } from "react-router-dom";
+// import { Navbar } from "./views/NavBar.jsx"
+import { AllListView } from "./views/AllListView";
 import "./App.css";
 
-function App() {
+export const App = () => {
   return (
-    <>
-      <div>
-        <h1>Henlo Dinglebricks</h1>
-      </div>
-    </>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <>
+            {/* <Navbar /> */}
+            <Outlet />
+          </>
+        }
+      >
+        <Route index element={<AllListView />} />
+        {/* <Route path="shippingships" element={<ShipList />} />
+        <Route path="haulingships" element={<HaulerList />}>
+          <Route path="edit" />
+        </Route>
+        <Route path="docks" element={<DockList />} /> */}
+      </Route>
+    </Routes>
   );
-}
+};
 
 export default App;
