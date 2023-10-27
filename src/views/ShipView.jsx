@@ -21,9 +21,12 @@ export const AllShipList = () => {
         <ul>
           {ships.map((ship) => {
             return (
-              <li key={ship.id}>
-                {ship.name} <button>Delete</button>
-              </li>
+              <>
+                <li key={ship.id}>
+                  <button className="dlt-btn">Delete</button>
+                  {ship.name}
+                </li>
+              </>
             );
           })}
         </ul>

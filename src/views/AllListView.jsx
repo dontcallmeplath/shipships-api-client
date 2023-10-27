@@ -9,9 +9,11 @@ export const AllListView = () => {
 
   return (
     <>
-      <div>{shipList}</div>
-      <div>{haulerList}</div>
-      <div>{dockList}</div>
+      <div className="list-container">
+        <div className="ships">{shipList}</div>
+        <div className="haulers">{haulerList}</div>
+        <div className="docks">{dockList}</div>
+      </div>
     </>
   );
 };

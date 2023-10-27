@@ -1,5 +1,5 @@
 import { Route, Routes, Outlet } from "react-router-dom";
-// import { Navbar } from "./views/NavBar.jsx"
+import { NavBar } from "./navbar/NavBar";
 import { AllListView } from "./views/AllListView";
 import "./App.css";
 
@@ -10,7 +10,7 @@ export const App = () => {
         path="/"
         element={
           <>
-            {/* <Navbar /> */}
+            <NavBar />
             <Outlet />
           </>
         }
