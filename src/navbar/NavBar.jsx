@@ -25,6 +25,11 @@ export const NavBar = () => {
           DOCKS
         </Link>
       </span>
+      <span className="navbar__item">
+        <Link className="navbar__link" to="/">
+          HOME
+        </Link>
+      </span>
     </div>
   );
 };

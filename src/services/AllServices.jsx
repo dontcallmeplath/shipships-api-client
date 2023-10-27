@@ -19,3 +19,12 @@ export const editResource = (resource, object, id) => {
     body: JSON.stringify(object),
   });
 };
+
+export const deleteSpecificResource = (resource, id) => {
+  return fetch(`http://localhost:8000/${resource}/${id}`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+};
