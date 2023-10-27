@@ -20,7 +20,7 @@ export const AllDockList = () => {
         <h1>DOCKS:</h1>
         <ul>
           {docks.map((dock) => {
-            return <li key={dock.id}>{dock.name}</li>;
+            return <li key={dock.id}>{dock.location}</li>;
           })}
         </ul>
       </section>

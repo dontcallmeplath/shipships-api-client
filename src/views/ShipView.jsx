@@ -20,7 +20,11 @@ export const AllShipList = () => {
         <h1>SHIPS:</h1>
         <ul>
           {ships.map((ship) => {
-            return <li key={ship.id}>{ship.name}</li>;
+            return (
+              <li key={ship.id}>
+                {ship.name} <button>Delete</button>
+              </li>
+            );
           })}
         </ul>
       </section>
