@@ -1,7 +1,4 @@
-import {
-  getResourceList,
-  getSpecificResource,
-} from "../services/AllServices.jsx";
+import { getResourcesWithEmbed } from "../services/AllServices.jsx";
 import { useEffect, useState } from "react";
 import "./Views.css";
 
@@ -10,7 +7,7 @@ export const AllDockList = () => {
   const [docks, setDocks] = useState([]);
 
   useEffect(() => {
-    getResourceList(resource).then((docksArr) => {
+    getResourcesWithEmbed(resource, "haulers").then((docksArr) => {
       setDocks(docksArr);
     });
   }, []);
