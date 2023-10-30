@@ -28,3 +28,9 @@ export const deleteSpecificResource = (resource, id) => {
     },
   });
 };
+
+export const getResourcesWithEmbed = (resource, embedRequest) => {
+  return fetch(`http://localhost:8000/${resource}?_embed=${embedRequest}`).then(
+    (res) => res.json()
+  );
+};

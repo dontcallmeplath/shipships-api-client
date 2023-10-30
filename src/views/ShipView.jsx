@@ -15,32 +15,47 @@ export const AllShipList = () => {
     });
   }, []);
 
-  return (
-    <>
-      <section>
-        <ul className="ships-list">
-          <h1>SHIPS:</h1>
-          {ships.map((ship) => {
-            return (
-              <li key={ship.id}>
-                <button
-                  className="dlt-btn"
-                  onClick={() => {
-                    deleteSpecificResource("ships", ship.id).then(() => {
-                      getResourceList(resource).then((shipsArr) => {
-                        setShips(shipsArr);
+  if (location.pathname == "/ships") {
+    return (
+      <>
+        <section>
+          <ul className="ships-list">
+            <h1>SHIPS:</h1>
+            {ships.map((ship) => {
+              return (
+                <li key={ship.id}>
+                  <button
+                    className="dlt-btn"
+                    onClick={() => {
+                      deleteSpecificResource("ships", ship.id).then(() => {
+                        getResourceList(resource).then((shipsArr) => {
+                          setShips(shipsArr);
+                        });
                       });
-                    });
-                  }}
-                >
-                  Delete
-                </button>
-                {ship.name}
-              </li>
-            );
-          })}
-        </ul>
-      </section>
-    </>
-  );
+                    }}
+                  >
+                    DELETE
+                  </button>
+                  {ship.name}
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <section>
+          <ul>
+            <h1>SHIPS:</h1>
+            {ships.map((ship) => {
+              return <li key={ship.id}>{ship.name}</li>;
+            })}
+          </ul>
+        </section>
+      </>
+    );
+  }
 };

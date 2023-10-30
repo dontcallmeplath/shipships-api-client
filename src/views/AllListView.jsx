@@ -1,6 +1,7 @@
 import { AllShipList } from "./ShipView";
 import { AllHaulerList } from "./HaulerView";
 import { AllDockList } from "./DockView";
+import "../index.css";
 
 export const AllListView = () => {
   const shipList = AllShipList();

@@ -21,6 +21,7 @@ ul {
   justify-content: flex-end;
 }
 
-.dlt-btn {
+.dlt-btn,
+.edit-btn {
   margin-right: 20px;
 }

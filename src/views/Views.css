@@ -6,3 +6,23 @@
   border: 1px solid grey;
   max-width: 13%;
 }
+
+.docks-list {
+  max-width: 30%;
+}
+
+.dock {
+  padding-bottom: 10px;
+}
+
+.edit-container {
+  border: 1px solid grey;
+  padding: 20px 50px;
+  max-width: 25%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.edit-element {
+  padding-bottom: 10px;
+}
