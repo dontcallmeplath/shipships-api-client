@@ -3,6 +3,7 @@ import {
   getSpecificResource,
 } from "../services/AllServices.jsx";
 import { useEffect, useState } from "react";
+import "./Views.css";
 
 export const AllDockList = () => {
   const resource = "docks";
@@ -17,8 +18,8 @@ export const AllDockList = () => {
   return (
     <>
       <section>
-        <h1>DOCKS:</h1>
-        <ul>
+        <ul className="docks-list">
+          <h1>DOCKS:</h1>
           {docks.map((dock) => {
             return <li key={dock.id}>{dock.location}</li>;
           })}

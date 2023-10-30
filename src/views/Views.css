@@ -1,0 +1,8 @@
+.ships-list,
+.haulers-list,
+.docks-list {
+  margin: auto;
+  padding: 0 50px 20px 50px;
+  border: 1px solid grey;
+  max-width: 13%;
+}

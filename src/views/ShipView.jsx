@@ -3,6 +3,7 @@ import {
   deleteSpecificResource,
 } from "../services/AllServices.jsx";
 import { useEffect, useState } from "react";
+import "./Views.css";
 
 export const AllShipList = () => {
   const resource = "ships";
@@ -17,8 +18,8 @@ export const AllShipList = () => {
   return (
     <>
       <section>
-        <h1>SHIPS:</h1>
-        <ul>
+        <ul className="ships-list">
+          <h1>SHIPS:</h1>
           {ships.map((ship) => {
             return (
               <li key={ship.id}>

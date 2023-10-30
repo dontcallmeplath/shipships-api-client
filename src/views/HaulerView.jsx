@@ -3,6 +3,7 @@ import {
   getSpecificResource,
 } from "../services/AllServices.jsx";
 import { useEffect, useState } from "react";
+import "./Views.css";
 
 export const AllHaulerList = () => {
   const resource = "haulers";
@@ -17,8 +18,8 @@ export const AllHaulerList = () => {
   return (
     <>
       <section>
-        <h1>HAULERS:</h1>
-        <ul>
+        <ul className="haulers-list">
+          <h1>HAULERS:</h1>
           {haulers.map((hauler) => {
             return <li key={hauler.id}>{hauler.name}</li>;
           })}

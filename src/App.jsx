@@ -21,11 +21,8 @@ export const App = () => {
         <Route index element={<AllListView />} />
         <Route path="/ships" element={<AllShipList />} />
         <Route path="/haulers" element={<AllHaulerList />} />
+        {/* <Route path="/haulers/edit" /> */}
         <Route path="/docks" element={<AllDockList />} />
-        {/* <Route path="haulingships" element={<HaulerList />}>
-          <Route path="edit" />
-        </Route>
-        <Route path="docks" element={<DockList />} /> */}
       </Route>
     </Routes>
   );
